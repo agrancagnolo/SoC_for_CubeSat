@@ -132,7 +132,7 @@ MACRO signal_generator
   PIN io_in[23]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213000 ;
+    ANTENNAGATEAREA 0.159000 ;
     ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met3 ;
@@ -888,7 +888,7 @@ MACRO signal_generator
   PIN wbs_adr_i[0]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213000 ;
+    ANTENNAGATEAREA 0.196500 ;
     ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met2 ;
@@ -998,7 +998,7 @@ MACRO signal_generator
   PIN wbs_adr_i[1]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.126000 ;
+    ANTENNAGATEAREA 0.196500 ;
     ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met2 ;
@@ -1148,7 +1148,7 @@ MACRO signal_generator
   PIN wbs_adr_i[4]
     DIRECTION INPUT ;
     USE SIGNAL ;
-    ANTENNAGATEAREA 0.213000 ;
+    ANTENNAGATEAREA 0.159000 ;
     ANTENNADIFFAREA 0.434700 ;
     PORT
       LAYER met2 ;
@@ -1792,10 +1792,10 @@ MACRO signal_generator
       LAYER li1 ;
         RECT 10.120 10.795 579.600 579.445 ;
       LAYER met1 ;
-        RECT 6.050 8.540 589.650 579.600 ;
+        RECT 6.510 9.560 589.650 579.600 ;
       LAYER met2 ;
-        RECT 6.070 4.280 589.620 579.545 ;
-        RECT 6.070 3.670 9.470 4.280 ;
+        RECT 6.530 4.280 589.620 579.545 ;
+        RECT 6.530 3.670 9.470 4.280 ;
         RECT 10.310 3.670 14.990 4.280 ;
         RECT 15.830 3.670 20.510 4.280 ;
         RECT 21.350 3.670 26.030 4.280 ;
@@ -2055,8 +2055,6 @@ MACRO signal_generator
         RECT 4.000 16.000 596.000 20.040 ;
         RECT 4.400 14.600 596.000 16.000 ;
         RECT 4.000 10.715 596.000 14.600 ;
-      LAYER met4 ;
-        RECT 171.415 55.935 171.745 112.705 ;
   END
 END signal_generator
 END LIBRARY

@@ -47,15 +47,15 @@ ifeq ($(PDK),sky130A)
 	export OPENLANE_TAG?=2023.07.19-1
 	MPW_TAG ?= mpw-9g
 
-ifeq ($(CARAVEL_LITE),1)
-	CARAVEL_NAME := caravel-lite
-	CARAVEL_REPO := https://github.com/efabless/caravel-lite
-	CARAVEL_TAG := $(MPW_TAG)
-else
-	CARAVEL_NAME := caravel
-	CARAVEL_REPO := https://github.com/efabless/caravel
-	CARAVEL_TAG := $(MPW_TAG)
-endif
+	ifeq ($(CARAVEL_LITE),1)
+		CARAVEL_NAME := caravel-lite
+		CARAVEL_REPO := https://github.com/efabless/caravel-lite
+		CARAVEL_TAG := $(MPW_TAG)
+	else
+		CARAVEL_NAME := caravel
+		CARAVEL_REPO := https://github.com/efabless/caravel
+		CARAVEL_TAG := $(MPW_TAG)
+	endif
 
 endif
 
@@ -65,15 +65,15 @@ ifeq ($(PDK),sky130B)
 	export OPENLANE_TAG?=2023.07.19-1
 	MPW_TAG ?= mpw-9g
 
-ifeq ($(CARAVEL_LITE),1)
-	CARAVEL_NAME := caravel-lite
-	CARAVEL_REPO := https://github.com/efabless/caravel-lite
-	CARAVEL_TAG := $(MPW_TAG)
-else
-	CARAVEL_NAME := caravel
-	CARAVEL_REPO := https://github.com/efabless/caravel
-	CARAVEL_TAG := $(MPW_TAG)
-endif
+	ifeq ($(CARAVEL_LITE),1)
+		CARAVEL_NAME := caravel-lite
+		CARAVEL_REPO := https://github.com/efabless/caravel-lite
+		CARAVEL_TAG := $(MPW_TAG)
+	else
+		CARAVEL_NAME := caravel
+		CARAVEL_REPO := https://github.com/efabless/caravel
+		CARAVEL_TAG := $(MPW_TAG)
+	endif
 
 endif
 

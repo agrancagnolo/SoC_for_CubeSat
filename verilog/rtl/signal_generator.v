@@ -1,4 +1,5 @@
 `default_nettype none
+`include "analog_signal_generator.v"
 
 
 
@@ -78,7 +79,7 @@ module signal_generator #(
     reg pulse_ended;
 
     reg [3:0]   f_sel_sr;  
-    reg [2:0]   f_sel_bit_counter; 
+    reg [3:0]   f_sel_bit_counter; 
 
     reg         i_enable_wb;
     reg         i_clk_wb;
@@ -104,7 +105,7 @@ module signal_generator #(
                 f_sel_bit_counter <= f_sel_bit_counter + 1;
             end
             
-            if (f_sel_bit_counter == 3'b100) begin
+            if (f_sel_bit_counter == 4'b0100) begin
                 i_f_select <= f_sel_sr;
                 f_sel_bit_counter <= 4'b0;
             end
@@ -307,6 +308,8 @@ assign i_f_select_mux = i_test ? i_f_select_wb : i_f_select ;
         io_out[11] <= o_phi_l1;
         io_out[12] <= o_phi_l2;
         io_out[13] <= o_phi_r;
+        io_out[6:0] <= 0;
+        io_out[26:14] <= 0;
     end
 
     always @(posedge wb_clk_i) begin
