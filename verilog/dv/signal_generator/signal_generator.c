@@ -75,6 +75,8 @@ void main()
 	FREQUENCY_ADDRESS = 0x0;
 	CLOCK_ADDRESS = 0x00;
 	ENABLE_ADDRESS = 1;
+	//RETURN_ADDRESS = 0x4; // Forzamos o_result[2] = 1 para activar el testbench
+
 	
 	while(1)
 	{
