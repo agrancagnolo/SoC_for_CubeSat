@@ -48,7 +48,9 @@ V40 col_mode GND {colmode}
 V41 row_mode GND {rowmode}
 **** begin user architecture code
 
-.lib /home/agrancagnolo/Prueba_PI_Lore/SoC_for_CubeSat/dependencies/pdks/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.xyce.spice tt
+** opencircuitdesign pdks install
+.lib ../dependencies/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
 
 
 
@@ -58,9 +60,10 @@ V41 row_mode GND {rowmode}
 * xyce commands
 
 *.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.spice
-.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.v.xspice
-
-.include /foss/designs/SKY130_SAR-ADC1/spice/adc_clkgen_with_edgedetect.gds.lvs.spice
+*.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.v.xspice
+.include adc_core_digital.v.xspice
+.include adc_clkgen_with_edgedetect.gds.lvs.spice
+*.include /foss/designs/SKY130_SAR-ADC1/spice/adc_clkgen_with_edgedetect.gds.lvs.spice
 *.include /foss/designs/SKY130_SAR-ADC1/xspice/adc_clkgen_with_edgedetect.xspice
 
 * mind the order: include AFTER XSPICE FILES

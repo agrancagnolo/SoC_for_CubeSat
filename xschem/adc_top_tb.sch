@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -440,9 +439,12 @@ value="
 * True mixed signal? (xspice) or analog? (spice)
 ****************
 *.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.spice
-.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.v.xspice
+*.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.v.xspice
 
-.include /foss/designs/SKY130_SAR-ADC1/spice/adc_clkgen_with_edgedetect.gds.lvs.spice
+.include adc_core_digital.v.xspice
+.include adc_clkgen_with_edgedetect.gds.lvs.spice
+
+*.include /foss/designs/SKY130_SAR-ADC1/spice/adc_clkgen_with_edgedetect.gds.lvs.spice
 *.include /foss/designs/SKY130_SAR-ADC1/xspice/adc_clkgen_with_edgedetect.xspice
 
 * mind the order: include AFTER XSPICE FILES
@@ -526,9 +528,10 @@ value="
 * xyce commands
 
 *.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.spice
-.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.v.xspice
-
-.include /foss/designs/SKY130_SAR-ADC1/spice/adc_clkgen_with_edgedetect.gds.lvs.spice
+*.include /foss/designs/SKY130_SAR-ADC1/spice/adc_core_digital.v.xspice
+.include adc_core_digital.v.xspice
+.include adc_clkgen_with_edgedetect.gds.lvs.spice
+*.include /foss/designs/SKY130_SAR-ADC1/spice/adc_clkgen_with_edgedetect.gds.lvs.spice
 *.include /foss/designs/SKY130_SAR-ADC1/xspice/adc_clkgen_with_edgedetect.xspice
 
 * mind the order: include AFTER XSPICE FILES
